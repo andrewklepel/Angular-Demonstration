@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en" ng-app="mainModule">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>AngularJS demonstration</title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css">
+	</head>
+	<body ng-controller="viewModel">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+					<h1>AngularJS demo</h1>
+					<div class="panel panel-info">
+						<div class="panel-heading">
+							<h3 class="panel-title">Demo 1: replacing a placeholder with text.</h3>
+						</div>
+						<div class="panel-body">
+							{{demo1text}}
+						</div>
+					</div>
+					<div class="panel panel-info">
+						<div class="panel-heading">
+							<h3 class="panel-title">Demo 2: looping over a list.</h3>
+						</div>
+						<div class="panel-body">
+							<div ng-repeat="i in demo2items">
+								<strong><a href="{{i.href}}">{{i.text}}</a></strong>
+							</div>
+						</div>
+					</div>
+					<div class="panel panel-info">
+						<div class="panel-heading">
+							<h3 class="panel-title">Demo 3: binding a function to a click event.</h3>
+						</div>
+						<div class="panel-body">
+							<div ng-click="demo3function()">
+								<strong>Click me</strong>
+							</div>
+						</div>
+					</div>
+					<div class="panel panel-info">
+						<div class="panel-heading">
+							<h3 class="panel-title">Demo 4: binding a label to a textbox's value.</h3>
+						</div>
+						<div class="panel-body">
+							<div>Type text in here: <input ng-model="demo4value" type="text" /></div>
+							<div>Textbox currently says: <span ng-bind="demo4value"></span></div>
+						</div>
+					</div>
+					<div class="panel panel-info">
+						<div class="panel-heading">
+							<h3 class="panel-title">Demo 5: binding a JSON object to a dropdown list.</h3>
+						</div>
+						<div class="panel-body">
+							<div class="dropdown">
+								<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+									Colors
+									<span class="caret"></span>
+								</button>
+								<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+									<li ng-repeat="color in demo5List"><a href="#">{{color.value}}</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+					<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0-beta.2/angular.min.js"></script>
+					<script type="text/javascript" src="js/bootstrap.js"></script>
+					<script type="text/javascript" src="js/custom.js"></script>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
